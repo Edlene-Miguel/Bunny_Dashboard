@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Show Bunny Page</title>
+</head>
+<body>
+	<a href = '/bunnies/<%= bunny._id %>/edit'>Edit</a>
+	<a href = '/'>Home</a><br><br>
+	
+	<input type = 'hidden' name = 'id' value = '<%= bunny._id %>'>
+		Name: <%= bunny.name %><br>
+		Family: <%= bunny.family %><br>
+		Gender: <%= bunny.gender %><br>
+		Age: <%= bunny.age %><br>
+
+
+
+</body>
+</html>

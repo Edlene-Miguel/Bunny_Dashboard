@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Edit Page</title>
+</head>
+<body>
+
+	<a href = '/'>Home</a><br>
+
+	<h1>Edit Page</h1>
+	<form action = '/bunnies/edit_method' method = 'post'>
+		Name: <input type = 'text' name = 'name' value = '<%= bunny.name %>'><br>
+		Age: <input type = 'text' name = 'age' value = '<%= bunny.age %>'><br>
+		Gender: <select name = 'gender'>
+			<option value = '<%= bunny.gender %>'><%= bunny.gender %></option>
+			<% if (bunny.gender !== 'Male') { %>
+				<option value = 'Male'>Male</option>
+			<% } %>
+			<% if (bunny.gender != 'Female'){ %>
+				<option value = 'Female'>Female</option>
+			<% } %>
+		</select><br><br>
+
+		<input type = 'submit' value = 'Edit'><br>
+
+		<a href = '/bunnies/<%= bunny._id %>/edit'>Cancel Changes</a>
+		<form action = '/bunnies/delete' method = 'post'>
+			<input type = 'hidden' name = 'id' value = '<%= bunny._id %>'>
+			<input type = 'submit' value = 'Delete Bunny :('>
+		</form>
+	</form>
+
+</body>
+</html>

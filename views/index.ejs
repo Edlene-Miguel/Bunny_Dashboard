@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>All Bunnies</title>
+</head>
+<body>
+	<h1>All Bunnies</h1>
+	<% bunnies.forEach(function(bunny){ %>
+		<p>Name: <%= bunny.name %></p>
+		<p>Age: <%= bunny.age %></p>
+		<p>Gender: <%= bunny.gender %></p>
+		<p>Family: <%= bunny.family %></p>
+
+		<a href = '/bunnies/<%= bunny._id %>/edit'>Edit Bunny</a>
+		<a href = '/bunnies/<%= bunny._id %>'>Show Bunny</a>
+		<a href = '/bunny/new'>Add Bunny!</a>
+		<hr>
+	<% }) %>
+
+</body>
+</html>
